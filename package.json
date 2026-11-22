@@ -1,0 +1,27 @@
+{
+  "name": "@formizeflow/next",
+  "version": "0.1.0",
+  "description": "Next.js helpers for FormFlow onboarding: signUid, decide, reportConversion and a FormFlowOnboarding server component.",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/formizeflow/formflow-next.git" },
+  "homepage": "https://github.com/formizeflow/formflow-next#readme",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": { "import": "./dist/index.js", "require": "./dist/index.cjs" },
+    "./server": { "import": "./dist/server.js", "require": "./dist/server.cjs" }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup src/index.tsx src/server.ts --format esm,cjs --dts --clean --external react --external next --external @formizeflow/sdk --external @formizeflow/react",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": { "@formizeflow/sdk": "^0.1.0", "@formizeflow/react": "^0.1.0" },
+  "peerDependencies": { "next": ">=15", "react": ">=18" },
+  "devDependencies": { "@types/node": "^22.10.0", "@types/react": "^19.0.0", "next": "^16.0.0", "react": "^19.0.0", "tsup": "^8.3.0", "typescript": "^5.7.0", "vitest": "^3.0.0" },
+  "publishConfig": { "access": "public", "provenance": true }
+}
