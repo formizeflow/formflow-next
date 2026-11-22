@@ -22,6 +22,6 @@
   },
   "dependencies": { "@formizeflow/sdk": "^0.1.0", "@formizeflow/react": "^0.1.0" },
   "peerDependencies": { "next": ">=15", "react": ">=18" },
-  "devDependencies": { "@types/node": "^22.10.0", "@types/react": "^19.0.0", "next": "^16.0.0", "react": "^19.0.0", "tsup": "^8.3.0", "typescript": "^5.7.0", "vitest": "^3.0.0" },
+  "devDependencies": { "@types/node": "^22.10.0", "@types/react": "^19.0.0", "next": "^16.0.0", "react": "^19.0.0", "tsup": "^8.3.0", "typescript": "^5.7.0", "vitest": "^4.1.11" },
   "publishConfig": { "access": "public", "provenance": true }
 }
